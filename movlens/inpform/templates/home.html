@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +21,7 @@
 
     <title>Movieslens</title>
   </head>
-  <body>
+  <body id="bg" style="background-image: url('{% static "images/cole-parrant-H53sOgyERH0-unsplash.jpg"%}')";>
     <nav>
       <ul>
         <li id="logo"><b>MOVIESLENS</b></li>
@@ -34,7 +35,7 @@
       <h1 class="display-3">Movie Recommendation System</h1>
       <p>Can't decide what movie to watch?<br>Answer some Question and get recommended</p>
       <div class="button-holder">
-        <button>Get Recommended!</button>
+        <button >Get Recommended!</button>
       </div>
       <div class="modal fade" id="myModal">
         <div class="modal-dialog modal-lg">
@@ -43,7 +44,7 @@
                     <h1>About Us!</h1>
                 </div>
                 <div class="modal-body">
-                    <img src="assets/Screenshot (220).png" alt="">
+                    <img src="{% static '/images/Screenshot (220).png' %}" alt="">
                 </div>
                 
             </div>                      

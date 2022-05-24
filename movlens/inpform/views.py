@@ -3,6 +3,9 @@ from django.http import HttpResponse
 
 # Create your views here.
 def say_hello(request):
+    return render(request,'home.html')
+
+def genres(request):
     return render(request,'main.html')
 
 def recomm(request):

@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns={
     path('',views.say_hello),
+    path('genres',views.genres),
     path('recommend',views.recomm)
 }
