@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movlens</title>
+</head>
+<body>
+    
+    <form action="/recommend" method="POST">
+
+            {% csrf_token %}
+
+    <label for="Genres"> Select Genres Of our Choice</label><br>
+    <input type="checkbox" id=Action name=Action value=Action>
+    <label for=Action> Action</label><br>
+    <input type="checkbox" id=Adventure name=Adventure value=Adventure>
+    <label for=Adventure> Adventure</label><br>
+    <input type="checkbox" id=Animation name=Animation value=Animation>
+    <label for=Animation> Animation</label><br>
+    <input type="checkbox" id=Comedy name=Comedy value=Comedy>
+    <label for=Comedy> Comedy</label><br>
+    <input type="checkbox" id=Crime name=Crime value=Crime>
+    <label for=Crime> Crime</label><br>
+    <input type="checkbox" id=Documentary name=Documentary value=Documentary>
+    <label for=Documentary> Documentary</label><br>
+    <input type="checkbox" id=Drama name=Drama value=Drama>
+    <label for=Drama> Drama</label><br>
+    <input type="checkbox" id=Fiction name=Fiction value=Fiction>
+    <label for=Fiction> Fiction</label><br>
+    <input type="checkbox" id=Foreign name=Foreign value=Foreign>
+    <label for=Foreign> Foreign</label><br>
+    <input type="checkbox" id=History name=History value=History>
+    <label for=History> History</label><br>
+    <input type="checkbox" id=Horror name=Horror value=Horror>
+    <label for=Horror> Horror</label><br>
+    <input type="checkbox" id=Music name=Music value=Music>
+    <label for=Music> Music</label><br>
+    <input type="checkbox" id=Mystery name=Mystery value=Mystery>
+    <label for=Mystery> Mystery</label><br>
+    <input type="checkbox" id=Science name=Science value=Science>
+    <label for=Science> Science</label><br>
+    <input type="checkbox" id=Thriller name=Thriller value=Thriller>
+    <label for=Thriller> Thriller</label><br>
+    <input type="checkbox" id=War name=War value=War>
+    <label for=War> War</label><br>
+    <input type="checkbox" id=Western name=Western value=Western>
+    <label for=Western> Western</label><br>
+    
+    <label for=Ocation> Planning Movie for</label><br>
+    <input type="checkbox" id=Family name=Family value=Family>
+    <label for=Family> Family</label><br>
+    <input type="checkbox" id=Movie name=Movie value=Movie>
+    <label for=Movie> Friends</label><br>
+    <input type="checkbox" id=Romance name=Romance value=Romance>
+    <label for=Romance> Movie Date</label><br>
+    <input type="checkbox" id=TV name=TV value=TV>
+    <label for=TV> Casual</label><br>
+    <input type="checkbox" id='' name='' value=''>
+    <label for=''> Don't Matter</label><br>
+
+    <input type="submit" value="Recommend">
+    
+    </form>
+    
+</body>
+</html>
