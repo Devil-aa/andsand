@@ -1,0 +1,200 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <!-- Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- raleway -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Movieslens</title>
+  </head>
+  <body style="background-image: url('{% static "images/image.jpg"%}')";>
+    <nav>
+        <ul>
+          <li id="logo"><a style="color: rgb(202,240,248)" href="/"><b>MOVIESLENS</b></a></li>
+          <li><a style="color: rgb(202,240,248)" href="/">Home</a></li>
+          <li>Top Genre</li>
+          <li>New Release</li>
+          <li data-toggle="modal" data-target="#myModal">About US</li>
+        </ul>
+      </nav>
+    <div class="container">
+      
+    <!-- pop-up model -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>About Us!</h1>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/Screenshot (220).png" alt="">
+                </div>
+                
+            </div>                      
+        </div>
+    </div>
+    </div>
+
+    <!-- options -->
+
+    <div class="check-container">
+        <form action="/recommend" method="POST">
+            {% csrf_token %}
+    
+    <!-- genres -->
+            <div class="genres">
+            <label for="Genres" class="headi">SELECT GENRES OF YOUR CHOICE</label><br>
+            <div class="element">
+                <input type="checkbox" id=Action name=Action value=Action>
+                <label for=Action> Action</label>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Adventure name=Adventure value=Adventure>
+                <label for=Adventure> Adventure</label>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Animation name=Animation value=Animation>
+                <label for=Animation> Animation</label>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Comedy name=Comedy value=Comedy>
+                <label for=Comedy> Comedy</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Crime name=Crime value=Crime>
+                <label for=Crime> Crime</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Documentary name=Documentary value=Documentary>
+                <label for=Documentary> Documentary</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Drama name=Drama value=Drama>
+                <label for=Drama> Drama</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Fiction name=Fiction value=Fiction>
+                <label for=Fiction> Fiction</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Foreign name=Foreign value=Foreign>
+                <label for=Foreign> Foreign</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=History name=History value=History>
+                <label for=History> History</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Horror name=Horror value=Horror>
+                <label for=Horror> Horror</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Music name=Music value=Music>
+                <label for=Music> Music</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Mystery name=Mystery value=Mystery>
+                <label for=Mystery> Mystery</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Science name=Science value=Science>
+                <label for=Science> Science</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Thriller name=Thriller value=Thriller>
+                <label for=Thriller> Thriller</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=War name=War value=War>
+                <label for=War> War</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Western name=Western value=Western>
+                <label for=Western> Western</label><br>
+            </div>
+
+            <div class="element">
+                <input type="checkbox" id=Any name=Any value=Any>
+                <label for=Any> Random</label><br>
+            </div>
+        </div>
+
+        <div class="with">       
+            <label for=Ocation class="headi"> PLANNING MOVIE FOR</label><br>
+
+            <div class="element">
+                <input type="checkbox" id=Family name=Family value=Family>
+                <label for=Family> Family</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Movie name=Movie value=Movie>
+                <label for=Movie> Friends</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=Romance name=Romance value=Romance>
+                <label for=Romance> Movie Date</label><br>
+            </div>
+
+            <div class="element">
+                <input type="checkbox" id=Horror name=Horror value=Horror>
+                <label for=Horror> Late Night Movie</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id=TV name=TV value=TV>
+                <label for=TV> Casual Meet</label><br>
+            </div>
+            
+            <div class="element">
+                <input type="checkbox" id='' name='' value=''>
+                <label for=''> Don't Matter</label><br>
+            </div>
+            
+            <div class="submit">
+                <input type="submit" value="Recommend">
+            </div>
+        </div>   
+    </form>
+    </div>
+    
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

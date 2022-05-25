@@ -21,11 +21,10 @@
 
     <title>Movieslens</title>
   </head>
-  <body id="bg" style="background-image: url('{% static "images/cole-parrant-H53sOgyERH0-unsplash.jpg"%}')";>
+  <body id="bg" style="background-image: url('{% static "images/image.jpg"%}')";>
     <nav>
       <ul>
         <li id="logo"><b>MOVIESLENS</b></li>
-        <li>Home</li>
         <li>Top Genre</li>
         <li>New Release</li>
         <li data-toggle="modal" data-target="#myModal">About US</li>
@@ -36,6 +35,7 @@
       <p>Can't decide what movie to watch?<br>Answer some Question and get recommended</p>
       <div class="button-holder">
         <a href="/genres"><button >Get Recommended!</button></a>
+        <a href="http://127.0.0.1:5000/"><button >Get Movie Review!</button></a>
       </div>
       <div class="modal fade" id="myModal">
         <div class="modal-dialog modal-lg">
