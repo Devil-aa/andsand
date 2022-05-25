@@ -6,7 +6,7 @@ def say_hello(request):
     return render(request,'home.html')
 
 def genres(request):
-    return render(request,'test.html')
+    return render(request,'main.html')
 
 def keyw(request):
     return render(request,'test.html')
