@@ -12,8 +12,9 @@
     <form action="/recommend" method="POST">
 
             {% csrf_token %}
+            
 
-    <label for="Genres"> Select Genres Of our Choice</label><br>
+     <label for="Genres"> Select Genres Of our Choice</label><br>
     <input type="checkbox" id=Action name=Action value=Action>
     <label for=Action> Action</label><br>
     <input type="checkbox" id=Adventure name=Adventure value=Adventure>
@@ -50,16 +51,17 @@
     <label for=Western> Western</label><br>
     
     <label for=Ocation> Planning Movie for</label><br>
-    <input type="checkbox" id=Family name=Family value=Family>
+    <input type="checkbox" id=Family name='Family' value='Family'>
     <label for=Family> Family</label><br>
-    <input type="checkbox" id=Movie name=Movie value=Movie>
+    <input type="checkbox" id='Friends' name='Friends' value='Friends'>
     <label for=Movie> Friends</label><br>
-    <input type="checkbox" id=Romance name=Romance value=Romance>
+    <input type="checkbox" id='Moive Date' name='Moive Date' value='Moive Date'>
     <label for=Romance> Movie Date</label><br>
-    <input type="checkbox" id=TV name=TV value=TV>
+    <input type="checkbox" id='Casual' name='Casual' value='Casual'>
     <label for=TV> Casual</label><br>
-    <input type="checkbox" id='' name='' value=''>
-    <label for=''> Don't Matter</label><br>
+    <input type="checkbox" id='Dont Matter' name='Dont Matter
+    ' value='Dont Matter>
+    <label for=''> Don't Matter</label><br> 
 
     <input type="submit" value="Recommend">
     
