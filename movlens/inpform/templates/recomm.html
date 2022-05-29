@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/recommendations.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
     <!-- Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,13 +51,46 @@
     </div>
     </div>
 
-    <div style=" color:rgb(202,240,248);" align="center">
-                <div class="movie">
+    <div style=" color:rgb(202,240,248); " align="center">
+                <div class="movie" style="display: inline;">
                     <h2 ><b>Movie Recommendations for You Are</b></h2>
+                    {{ l.text }}
                     {% if l %}
-                    {{ l }}
+                    
+                    {% for i in l %}
+
+                    <div class="card" style="width: 15rem;" title="{{i}}" onclick="recommendcard(this)">
+                        <div class="imghvr">
+                          <img class="card-img-top" height="360" width="240" alt="{{i}}" src="{% static '/images/632144.png' %}">
+                         </div>
+                        <div style="color:black" class="card-body">
+                          <h5 class="card-title" style="color:black">{{i.title}}</h5><br>
+                          
+                          <br>
+                          {{i.description}}<br>
+                          <br>
+                          IMDB Rating:<br>
+                          {{i.rating}}<br>
+                          <br>
+                          cast:<br>
+                          {% for j in i.cast %}
+                          {{j}}<br>
+                          {% endfor %}
+                          <br>
+                          Director:<br>
+                          {{i.director}}<br>
+                          <br>
+                          Release Date:<br>
+                          {{i.date}}<br>
+                          Runtime:<br>
+                          {{i.runtime}} minutes
+                        </div>
+                    </div>
+                    <br>
+                    {% endfor %}
                     {% else %}
-                    Sorry please try a good combination
+                    <br>
+                    <h1 style="color:red;">Sorry please try a good combination</h1>
                     {% endif %}
                     <div class="button-holder-2">
                     <a href="/genres"><button >Go Back And Try Again !</button></a></div>

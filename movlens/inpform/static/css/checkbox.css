@@ -1,0 +1,198 @@
+body{
+    margin:0;
+    padding:0;
+    background-image: url("assets/asdf.jpg") ;  
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    text-align: center;
+}
+nav ul{
+    display:flex;
+    align-items: center;
+}
+nav ul li{
+    /* color:rgb(202,240,248); */
+    padding: 20px;
+    font-size: 23px;
+    list-style-type: none;
+    font-stretch: expanded;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+}
+#logo{
+    font-size: 39px;
+    margin-right: 100px;
+}
+.container-sheesh{
+    width:95%;
+    margin: auto;
+    padding:30px;
+    display:flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+.form-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.headi{
+    font-size: 30px;
+    color:white ;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+.genres{
+    display: flex;
+    flex-wrap: wrap;
+    padding:10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+.element{
+    cursor: pointer;
+    width:23%;
+    text-align: center;
+    margin:15px 0;
+    font-family: 'Raleway', sans-serif;
+}
+.form-1 .element input[type="checkbox"]{
+    display: none;
+}
+.form-1 .element label{
+    position:relative;
+    background-color:rgba(143,134,208,0.8) ;
+    display: inline-block;
+    padding: 15px ;
+    width: 60%;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+    user-select: none;
+    overflow: hidden;
+}
+.form-1 .element label:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 50%;
+    background-color:rgba(143,134,208,0.3) ;
+}
+.form-1 .element input[type="checkbox"]:checked ~ label{
+    background-color: #d8f2f8;
+    color:rgb(113, 100, 212) ;
+    text-shadow: none;
+}
+.form-2-director button{
+
+    padding:15px 100px;
+    margin-top: 30px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #e0f2f6;
+    color :rgb(145, 131, 252);
+    font-family: 'Raleway', sans-serif;
+    border-style: none;
+}
+
+.form-2 .with{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+.form-2 .with .element{
+    width:90%;
+    margin: 5px;
+}
+.form-2 .element input[type="checkbox"]{
+    display: none;
+}
+.form-2 .element label{
+    position:relative;
+    background-color:rgba(143,134,208,0.8) ;
+    display: inline-block;
+    padding: 15px ;
+    width: 60%;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+    user-select: none;
+    overflow: hidden;
+}
+.form-2 .element label:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 50%;
+    background-color:rgba(143,134,208,0.3) ;
+}
+.form-2 .element input[type="checkbox"]:checked ~ label{
+    background-color: #d8f2f8;
+    color:rgb(113, 100, 212) ;
+    text-shadow: none;
+}
+.buttons{
+    width:90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left:60px;
+}
+.submit input{
+    padding:15px 30px;
+    margin-top: 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #e0f2f6;
+    color :rgb(145, 131, 252);
+    font-family: 'Raleway', sans-serif;
+    border-style: none;
+}
+.form-1-director button{
+    padding:15px 30px;
+    margin-top: 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #e0f2f6;
+    color :rgb(145, 131, 252);
+    font-family: 'Raleway', sans-serif;
+    border-style: none;
+}
+
+.hidden{
+    display:none;
+}
+
+.modal{
+    text-align: center;
+}
+#myModal {
+    color: black;
+}
+.modal-header{
+    font-family: 'Playfair Display', serif;
+    margin: auto;
+    font-stretch: expanded;
+}
