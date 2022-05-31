@@ -25,10 +25,10 @@
     <title>Movieslens</title>
   </head>
   <body style="background-image: url('{% static "images/image.jpg"%}')";>
-    <nav>
-        <ul>
-          <li id="logo"><a style="color: rgb(202,240,248)" href="/"><b>MOVIESLENS</b></a></li>
-          <li><a style="color: rgb(202,240,248)" href="/">Home</a></li>
+    <nav style="color:white;">
+        <ul style="color:white;">
+          <li id="logo"><a style="color: white;text-decoration: none;" href="/"><b>MOVIESLENS</b></a></li>
+          <li><a style="color: white ;text-decoration: none;" href="/">Home</a></li>
           <li>Top Genre</li>
           <li>New Release</li>
           <li data-toggle="modal" data-target="#myModal">About US</li>
@@ -36,66 +36,82 @@
       </nav>
     <div class="container">
       
-    <!-- pop-up model -->
-    <div class="modal fade" id="myModal">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1>About Us!</h1>
-                </div>
-                <div class="modal-body">
-                    <img src="{% static '/images/Screenshot (220).png' %}" alt="">
-                </div>
-            </div>                      
-        </div>
-    </div>
-    </div>
+    
 
-    <div style=" color:rgb(202,240,248); " align="center">
-                <div class="movie" style="display: inline;">
-                    <h2 ><b>Movie Recommendations for You Are</b></h2>
-                    {{ l.text }}
+    <div style=" color:rgb(202,240,248); ">
+                <div class="movie" >
+                    <h2 ><b><center>Movie Recommendations for You Are</center></b></h2>
+                    
                     {% if l %}
                     
                     {% for i in l %}
-
-                    <div class="card" style="width: 15rem;" title="{{i}}" onclick="recommendcard(this)">
-                        <div class="imghvr">
-                          <img class="card-img-top" height="360" width="240" alt="{{i}}" src="{% static '/images/632144.png' %}">
-                         </div>
-                        <div style="color:black" class="card-body">
-                          <h5 class="card-title" style="color:black">{{i.title}}</h5><br>
+                    <center>
+                    <div class="card" style="width: 75%;color:white;padding:20px;border-radius:25px;background-color: rgba(0, 0, 8, 0.15);" title="{{i.title}}">
+                        
                           
-                          <br>
-                          {{i.description}}<br>
-                          <br>
-                          IMDB Rating:<br>
-                          {{i.rating}}<br>
-                          <br>
-                          cast:<br>
+                        <div class="child">
+                          <table >
+
+
+                            <tr><th style="padding:10px" rowspan="7"><img style="border-radius:25px;" class="card-img-top" height="360" width="240" alt="{{i.title}}" src="{{i.poster}}">
+                            </th>
+                              <th colspan="2"><h3 class="card-title"><b>{{i.title}}</b></h3></th></tr>
+                          
+                          
+                            <tr><td colspan="2"><h5>{{i.description}}</h5></td></tr>
+                            <tr><td>
+                          <h3>IMDB Rating:</h3></td>
+                          
+                          <td><h3>cast:</h3></td></tr>
+                          
+                          <tr><td><h5>{{i.rating}}</h5>
+                          </td><td>
+                          <ul>
                           {% for j in i.cast %}
-                          {{j}}<br>
+                          <li><h5>{{j}}</h5></li><br>
                           {% endfor %}
-                          <br>
-                          Director:<br>
-                          {{i.director}}<br>
-                          <br>
-                          Release Date:<br>
-                          {{i.date}}<br>
-                          Runtime:<br>
-                          {{i.runtime}} minutes
+                          </ul></td>
+                          </tr>
+                          <tr><td>
+                          <h3>Director:</h3></td>
+                          <td><h3>Release Date:</h3><br>
+                          </td></tr>
+                          <tr><td>
+                          <h5>{{i.director}}</h5></td>
+                          
+                          <td>
+                          <h5>{{i.date}}</h5></td></tr>
+                          <tr><td><h3>Runtime:</h3><br></td>
+                          <td><h5>{{i.runtime}} minutes</h5></td></tr>
+                          </table>
                         </div>
                     </div>
+                    </center>
                     <br>
                     {% endfor %}
                     {% else %}
-                    <br>
-                    <h1 style="color:red;">Sorry please try a good combination</h1>
+                    <br><center>
+                    <h1 style="color:red;">Sorry please try a good combination</h1></center>
                     {% endif %}
-                    <div class="button-holder-2">
-                    <a href="/genres"><button >Go Back And Try Again !</button></a></div>
+                    <center><div class="button-holder-2">
+                    <a href="/genres"><button >Go Back And Try Again !</button></a></div></center>
                 </div>
     </div>
+
+
+    <!-- pop-up model -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h1>About Us!</h1>
+              </div>
+              <div class="modal-body">
+                <img src="{% static '/images/Screenshot (220).png' %}" alt="">
+              </div>                    
+          </div>                      
+      </div>
+  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -87,31 +87,7 @@
   </div>
   {% endfor %}
   
-  {% if casts|length > 1 %}
-  <div class="movie" style="color: #E8E8E8;">
-    	<center>
-		<h3>TOP CAST</h3>
-		<h5>(Click on the cast to know more)</h5>
-	</center>
-  </div>
-
-  <div class="movie-content">
-        {% for name, details in casts.items() if not casts.hidden %}
-          <div class="castcard card" style="width: 15rem;" title="Click to know more about {{name}}" data-toggle="modal" data-target="#{{details[0]}}">
-            <div class="imghvr">
-              <img class="card-img-top cast-img" id="{{details[0]}}" height="360" width="240" alt="{{name}} - profile" src="{{details[2]}}">
-              <figcaption class="fig">
-                <button class="card-btn btn btn-danger"> Know More </button>
-              </figcaption>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">{{name|title}}</h5>
-              <h5 class="card-title"><span style="color:#756969;font-size: 20px;">Character: {{details[1]|title}}</span></h5>
-            </div>
-          </div>
-      {% endfor %}
-    </div>
-{% endif %}
+  
 
       {% if movie_cards|length > 1 %}
 

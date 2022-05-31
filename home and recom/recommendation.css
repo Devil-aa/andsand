@@ -192,15 +192,3 @@ nav ul li a:hover{
     border:none;
     border-radius: 10px;
 }
-th{
-    text-align: left;
-}
-td{
-    text-align: center;
-}
-table{
-    border: 3px;
-    border-color: red;
-    padding: 0px;
-    margin: 0px;
-}

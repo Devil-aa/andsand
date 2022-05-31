@@ -28,6 +28,20 @@ def recomm(request):
 
     df2=df2.sample(frac = 1)
     df3=df2.head(10)
+    poster=[]
+
+    for i in list(df3['title']):
+
+        try:
+            series = ia.search_movie(i)
+            for i in range(len(series)):
+                id = series[i].movieID
+            series = ia.get_movie(id)
+            cover = series.data['cover url']
+            poster.append(cover)
+        except:
+            poster.append("../static/images/632144.png")
+
 
     l=[]
     for i in range(len(list(df3['title']))):
@@ -47,7 +61,8 @@ def recomm(request):
             pass
 
 
-        l.append({'title':list(df3['title'])[i],
+        l.append({'poster':poster[i],
+                'title':list(df3['title'])[i],
                 'rating':str(list(df3['vote_average'])[i]),
                 'director':list(df3['director'])[i],
                 'runtime':str(list(df3['runtime'])[i]),
